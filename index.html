@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Shrija ❤️</title>
+<title>Merry Christmas Shrija</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
 * {
   margin: 0;
@@ -15,18 +15,66 @@
 }
 
 body {
-  height: 100vh;
-  background: radial-gradient(circle at top, #1b2735, #090a0f);
-  overflow: hidden;
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+  overflow: hidden;
+  color: #333;
+}
+
+section {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  padding: 30px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.8s ease;
+}
+
+section.active {
+  display: flex;
+}
+
+.card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 420px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 25px;
+  background: #ff6f91;
   color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff4f75;
 }
 
 /* Snow */
 .snow {
   position: fixed;
   top: -10px;
-  font-size: 12px;
+  font-size: 14px;
   animation: fall linear infinite;
   opacity: 0.8;
 }
@@ -36,142 +84,84 @@ body {
     transform: translateY(110vh);
   }
 }
-
-/* Center */
-.container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-
-.card {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(12px);
-  padding: 35px;
-  border-radius: 25px;
-  box-shadow: 0 0 40px rgba(255,255,255,0.15);
-  animation: fadeIn 3s ease;
-  max-width: 420px;
-}
-
-/* Text */
-.intro {
-  font-size: 14px;
-  letter-spacing: 2px;
-  opacity: 0.8;
-}
-
-h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 52px;
-  margin: 10px 0;
-  color: #ffccd5;
-  text-shadow: 0 0 25px rgba(255,100,150,0.8);
-}
-
-.typewriter {
-  font-size: 16px;
-  margin-top: 15px;
-  min-height: 80px;
-}
-
-button {
-  margin-top: 25px;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 30px;
-  background: linear-gradient(135deg, #ff4d6d, #ff758f);
-  color: white;
-  font-size: 15px;
-  cursor: pointer;
-  box-shadow: 0 0 25px rgba(255,80,120,0.8);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 40px rgba(255,80,120,1);
-}
-
-.hidden {
-  display: none;
-  margin-top: 20px;
-  animation: fadeIn 2s ease;
-}
-
-.final {
-  font-family: 'Great Vibes', cursive;
-  font-size: 38px;
-  color: #ffd6e0;
-  margin-top: 15px;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Hearts */
-.heart {
-  position: fixed;
-  bottom: -10px;
-  font-size: 20px;
-  animation: floatUp linear infinite;
-}
-
-@keyframes floatUp {
-  to {
-    transform: translateY(-110vh) rotate(360deg);
-    opacity: 0;
-  }
-}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- PAGE 1 -->
+<section class="active">
   <div class="card">
-    <div class="intro">A Christmas Message</div>
-    <h1>For Shrija</h1>
-
-    <div id="text" class="typewriter"></div>
-
-    <button onclick="reveal()">Tap gently 🎁</button>
-
-    <div id="final" class="hidden">
-      <p>You are my favorite miracle.</p>
-      <div class="final">Merry Christmas, Shrija ❤️</div>
-    </div>
+    <h1>Hi Shrija 👋</h1>
+    <p>
+      This is just something small.<br>
+      Something simple.<br><br>
+      Please tap gently 🙂
+    </p>
+    <button onclick="nextPage()">Next</button>
   </div>
-</div>
+</section>
+
+<!-- PAGE 2 -->
+<section>
+  <div class="card">
+    <p>
+      It’s Christmas 🎄<br><br>
+      And I thought… instead of just saying it,<br>
+      I’d do something a little different.
+    </p>
+    <button onclick="nextPage()">Next</button>
+  </div>
+</section>
+
+<!-- PAGE 3 -->
+<section>
+  <div class="card">
+    <p>
+      I like how calm you are.<br><br>
+      I like how easy it is to talk to you.<br><br>
+      And I like that things feel… normal.
+    </p>
+    <button onclick="nextPage()">Next</button>
+  </div>
+</section>
+
+<!-- PAGE 4 -->
+<section>
+  <div class="card">
+    <p>
+      No big promises.<br>
+      No heavy words.<br><br>
+      Just a genuine Christmas wish ✨
+    </p>
+    <button onclick="nextPage()">Next</button>
+  </div>
+</section>
+
+<!-- PAGE 5 -->
+<section>
+  <div class="card">
+    <h1>Merry Christmas 🎄</h1>
+    <p>
+      Hope this made you smile a little.<br><br>
+      — Shrija
+    </p>
+  </div>
+</section>
 
 <script>
-/* Typewriter */
-const message = "Some people feel like home.\nYou feel like Christmas.\nWarm. Magical. Forever.";
-let i = 0;
-const speed = 45;
-const target = document.getElementById("text");
+let current = 0;
+const pages = document.querySelectorAll("section");
 
-function type() {
-  if (i < message.length) {
-    target.innerHTML += message.charAt(i) === "\n" ? "<br>" : message.charAt(i);
-    i++;
-    setTimeout(type, speed);
+function nextPage() {
+  pages[current].classList.remove("active");
+  current++;
+  if (current < pages.length) {
+    pages[current].classList.add("active");
   }
 }
-type();
 
-/* Reveal */
-function reveal() {
-  document.getElementById("final").style.display = "block";
-  for (let i = 0; i < 20; i++) createHeart();
-}
-
-/* Snow */
+/* Snow effect */
 function snow() {
   const s = document.createElement("div");
   s.className = "snow";
@@ -181,18 +171,7 @@ function snow() {
   document.body.appendChild(s);
   setTimeout(() => s.remove(), 6000);
 }
-setInterval(snow, 200);
-
-/* Hearts */
-function createHeart() {
-  const h = document.createElement("div");
-  h.className = "heart";
-  h.innerHTML = "❤️";
-  h.style.left = Math.random() * 100 + "vw";
-  h.style.animationDuration = Math.random() * 3 + 3 + "s";
-  document.body.appendChild(h);
-  setTimeout(() => h.remove(), 5000);
-}
+setInterval(snow, 250);
 </script>
 
 </body>
